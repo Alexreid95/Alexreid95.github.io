@@ -1,0 +1,29 @@
+body, #slider, .slide {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+  overflow: : hidden;
+}
+
+.slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slide1 {
+  background-image: url("images/image1_yousef-espanioly.jpg")
+}
+
+.slide2 {
+  background-image: url("images/image2_yousef-espanioly.jpg")
+}
+
+.slide3 {
+  background-image: url("images/image3_tomas-williams.jpg")
+}
+
+.slide4 {
+  background-image: url("images/image4_erol-ahmed.jpg")
+}
