@@ -68,9 +68,24 @@
         }
       }
 
-      // slide change when the arrow is clicked
+      //Slide change when the arrow is clicked with mouse
       arrowLeft.addEventListener("click", toPrev);
       arrowRight.addEventListener("click", toNext);
+      
+      //Check keyboard arrow pressed
+      var checkKeyPressed = function(key) {
+        switch (key.keyCode) {
+          case 37:
+            toPrev();
+            break;
+          case 39:
+            toNext();
+            break;
+        }
+      }
+
+      //Slide change when keyboard arrow is pressed
+      document.addEventListener("keyup", checkKeyPressed);
 
       //Running functions
       startSlides();
