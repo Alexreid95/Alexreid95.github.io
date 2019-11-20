@@ -13,17 +13,17 @@ body, #slider, .slide {
 }
 
 .slide1 {
-  background-image: url("images/Image1_yousef-espanioly.jpg")
+  background-image: url("./images/Image1_yousef-espanioly.jpg")
 }
 
 .slide2 {
-  background-image: url("images/Image2_yousef-espanioly.jpg")
+  background-image: url("./images/Image2_yousef-espanioly.jpg")
 }
 
 .slide3 {
-  background-image: url("images/Image3_tomas-williams.jpg")
+  background-image: url("./images/Image3_tomas-williams.jpg")
 }
 
 .slide4 {
-  background-image: url("images/Image4_erol-ahmed.jpg")
+  background-image: url("./images/Image4_erol-ahmed.jpg")
 }
