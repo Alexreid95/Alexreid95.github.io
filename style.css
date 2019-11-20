@@ -30,3 +30,28 @@ body, #slider, .slide {
 .slide4 {
   background-image: url("./images/Image4_erol-ahmed.jpg")
 }
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  width: 80px;
+  height: 80px;
+  box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.arrow:hover {
+  box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.9);
+}
+
+#arrow-left {
+  transform: rotate(135deg);
+  left: 0px;
+  margin-left: 50px;
+}
+
+#arrow-right {
+  transform: rotate(315deg);
+  right: 0px;
+  margin-right: 50px;
+}
