@@ -3,6 +3,9 @@ let slideImg = document.querySelectorAll(".slide");
 let arrowLeft = document.querySelector('#arrow-left');
 let arrowRight = document.querySelector('#arrow-right');
 let slideIdx = 0;
+var captionTxt = document.querySelector(".caption-holder .caption-txt");
+var dotCont = document.getElementById("dot-cont");
+var dots = [];
 
 //Hides all slide Images
 function reset() {
@@ -11,41 +14,56 @@ function reset() {
   }
 }
 
+//Returns the right slide and caption
+function displaySlide() {
+  slideImg[slideIdx].style.display = "block";
+  captionTxt.innerText = slideImg[slideIdx].querySelector(".caption-txt").innerText;
+}
+
+//Returns the Dot Navigation
+function dotNav() {
+  for (let i = 0; i < slideImg.length; i++) {
+    var dot = document.createElement("span");
+    dot.classList.add("dots");
+    dotCont.append(dot);
+    dots.push(dot);
+  }
+}
+
 //Init first slide
 function startSlides() {
   reset();
-  slideImg[0].style.display = "block";
+  displaySlide();
+  dotNav();
 }
 
-//Move to previous slide
+//Move to previous slide when the  left arrow is clicked with mouse
 var toPrev = function() {
   reset();
   if (slideIdx === 0) {
     slideIdx = slideImg.length - 1;
-    slideImg[slideIdx].style.display = "block";
+    displaySlide()
   } else {
     slideIdx--;
-    slideImg[slideIdx].style.display = "block"
+    displaySlide()
   }
 }
+arrowLeft.addEventListener("click", toPrev);
 
-//Move to next slide
+//Move to next slide when the right arrow is clicked with mouse
 var toNext = function() {
   reset();
   if (slideIdx === slideImg.length - 1) {
     slideIdx = 0;
-    slideImg[slideIdx].style.display = "block";
+    displaySlide()
   } else {
     slideIdx++;
-    slideImg[slideIdx].style.display = "block"
+    displaySlide()
   }
 }
-
-//Slide change when the arrow is clicked with mouse
-arrowLeft.addEventListener("click", toPrev);
 arrowRight.addEventListener("click", toNext);
 
-//Check keyboard arrow pressed
+//Slide change when keyboard arrow is pressed
 var checkKeyPressed = function(key) {
   switch (key.keyCode) {
     case 37:
@@ -56,8 +74,6 @@ var checkKeyPressed = function(key) {
       break;
   }
 }
-
-//Slide change when keyboard arrow is pressed
 document.addEventListener("keyup", checkKeyPressed);
 
 //Running functions
