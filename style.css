@@ -27,19 +27,19 @@ body, #slider, .slide, .wrap {
 }
 
 .slide1 {
-  background-image: url("./images/Image1_yousef-espanioly.jpg")
+  background-image: url("images/Image1_yousef-espanioly.jpg")
 }
 
 .slide2 {
-  background-image: url("./images/Image2_yousef-espanioly.jpg")
+  background-image: url("images/Image2_yousef-espanioly.jpg")
 }
 
 .slide3 {
-  background-image: url("./images/Image3_tomas-williams.jpg")
+  background-image: url("images/Image3_tomas-williams.jpg")
 }
 
 .slide4 {
-  background-image: url("./images/Image4_erol-ahmed.jpg")
+  background-image: url("images/Image4_erol-ahmed.jpg")
 }
 
 /* -----------Captions ----------- */
@@ -102,22 +102,21 @@ body, #slider, .slide, .wrap {
   background-clip: padding-box;
   box-sizing: border-box;
   padding: 0%;
-}
-
-#play-btn {
   border-style: solid;
   border-width: 25px 0px 25px 50px;
   border-color: transparent transparent transparent rgba(255, 255, 255, 0.4);
+  transition: border-color 0.4s;
 }
 
-#pause-btn {
+.play-pause-btn.pause {
   border-style: double;
   border-width: 0px 0px 0px 50px;
   border-color: rgba(255, 255, 255, 0.4);
+  transition: border-color 0.4s;
 }
 
-.play-pause-btn:hover {
-  border-color: rgba(255, 255, 255, 0.9)
+.play-pause-btn:hover, .play-pause-btn.pause:hover {
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.9);
 }
 
 /* -----------Dot Navigation ----------- */
