@@ -6,6 +6,10 @@ var slideIdx = 0;
 var captionTxt = document.querySelector(".caption-holder .caption-txt");
 var dotCont = document.getElementById("dot-cont");
 var dots = [];
+var auto = null;
+var playBtn = document.querySelector(".play-pause-btn")
+var pauseBtn = document.querySelector(".play-pause-btn.pause")
+
 
 //Returns the Dot Navigation
 function dotNav() {
@@ -22,7 +26,7 @@ function dotNav() {
 function reset() {
   for (let i = 0; i < slideImg.length; i++) {
     slideImg[i].style.display = "none";
-    dots[slideIdx].classList.remove("active");
+    dots[i].classList.remove("active");
   }
 }
 
@@ -33,24 +37,33 @@ function displaySlide() {
   dots[slideIdx].classList.add("active");
 }
 
+//Auto-Loop slides with a set time
+function autoLoopSlides() {
+  auto = setInterval(toNext, 1000);
+  playBtn.style.display = "block";
+  pauseBtn.style.display = "none";
+}
+
 //Init first slide
 function startSlides() {
   dotNav();
   reset();
   displaySlide();
+  autoLoopSlides();
 }
 
 //For dot navigation, to move to correct slide
 function moveSlide(slideIdx) {
   reset();
-  slideImg[slideIdx].style.display = "block";
-  captionTxt.innerText = slideImg[slideIdx].querySelector(".caption-txt").innerText;
-  dots[slideIdx].classList.add("active");
-  for (let i=0; i<slideImg.length; i++) {
-    if (i!==slideIdx) {
-      dots[i].classList.remove("active");
-    }
-  }
+  displaySlide();
+}
+
+//Play/Pause button
+function pauseSlide() {
+  clearInterval(auto);
+  pauseBtn.style.display = "block";
+  playBtn.style.display = "none";
+  auto === null;
 }
 
 //Move to previous slide when the  left arrow is clicked with mouse
