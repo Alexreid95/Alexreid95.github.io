@@ -42,6 +42,7 @@ body, #slider, .slide, .wrap {
   background-image: url("images/Image4_erol-ahmed.jpg")
 }
 
+/* -----------Slider Animation----------- */
 /* -----------Captions ----------- */
 .caption-txt {
   display: none;
@@ -144,3 +145,36 @@ body, #slider, .slide, .wrap {
 .dots:hover, .dots.active {
   background-color: rgba(255, 255, 255, 0.8)
 }
+
+/* -----------Smaller Screens Settings----------- */
+@media screen and (max-width: 400px) {
+  .slide {
+    max-width: 100vh;
+    max-height: 100vh;
+  }
+
+  .caption-holder {
+    font-size: 30px;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .play-pause-btn {
+    width: 40px;
+    height: 40px;
+    border-width: 20px 0px 20px 40px;
+  }
+
+  .play-pause-btn.pause {
+    border-style: double;
+    border-width: 0px 0px 0px 30px;
+  }
+
+  .dots {
+    width: 15px;
+    height: 15px;
+    margin: 8px;
+  }
