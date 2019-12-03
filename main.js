@@ -1,16 +1,22 @@
 // Variables
+// Slides and arrows
 let slideImg = document.querySelectorAll(".slide");
 let arrowLeft = document.querySelector('#arrow-left');
 let arrowRight = document.querySelector('#arrow-right');
 var slideIdx = 0;
+//Slide Animation
+
+// Caption text
 var captionTxt = document.querySelector(".caption-holder .caption-txt");
+// Dot navigation
 var dotCont = document.getElementById("dot-cont");
 var dots = [];
+// Loop, play and pause
 var auto = null;
-var playBtn = document.querySelector(".play-pause-btn")
-var pauseBtn = document.querySelector(".play-pause-btn.pause")
+var playBtn = document.querySelector(".play-pause-btn");
+var pauseBtn = document.querySelector(".play-pause-btn.pause");
 
-
+// Functions
 //Returns the Dot Navigation
 function dotNav() {
   for (let i = 0; i < slideImg.length; i++) {
@@ -32,6 +38,10 @@ function reset() {
 
 //Returns the right slide and caption
 function displaySlide() {
+  if (auto !== null) {
+    pauseSlide();
+    autoLoopSlides();
+  }
   slideImg[slideIdx].style.display = "block";
   captionTxt.innerText = slideImg[slideIdx].querySelector(".caption-txt").innerText;
   dots[slideIdx].classList.add("active");
@@ -39,7 +49,7 @@ function displaySlide() {
 
 //Auto-Loop slides with a set time
 function autoLoopSlides() {
-  auto = setInterval(toNext, 1000);
+  auto = setInterval(toNext, 4000);
   playBtn.style.display = "block";
   pauseBtn.style.display = "none";
 }
@@ -53,8 +63,9 @@ function startSlides() {
 }
 
 //For dot navigation, to move to correct slide
-function moveSlide(slideIdx) {
+function moveSlide(i) {
   reset();
+  slideIdx = i;
   displaySlide();
 }
 
@@ -71,10 +82,10 @@ var toPrev = function() {
   reset();
   if (slideIdx === 0) {
     slideIdx = slideImg.length - 1;
-    displaySlide()
+    displaySlide();
   } else {
     slideIdx--;
-    displaySlide()
+    displaySlide();
   }
 }
 arrowLeft.addEventListener("click", toPrev);
@@ -84,10 +95,10 @@ var toNext = function() {
   reset();
   if (slideIdx === slideImg.length - 1) {
     slideIdx = 0;
-    displaySlide()
+    displaySlide();
   } else {
     slideIdx++;
-    displaySlide()
+    displaySlide();
   }
 }
 arrowRight.addEventListener("click", toNext);
