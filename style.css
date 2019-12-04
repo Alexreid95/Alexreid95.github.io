@@ -3,6 +3,7 @@ body, #slider, .slide, .wrap {
   padding: 0px;
   width: 100%;
   height: 100vh;
+  background-color: rgb(0, 0, 0);
 }
 
 .wrap {
@@ -47,13 +48,12 @@ body, #slider, .slide, .wrap {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1s;
   animation-name: fade;
-  animation-duration: 1s;
-  background-color: rgb(0, 0, 0);
+  animation-duration: 1.6s;
 }
 
 @-webkit-keyframes fade {
   from {
-    opacity: 0.5;
+    opacity: 0.1;
   }
 
   to {
@@ -63,7 +63,7 @@ body, #slider, .slide, .wrap {
 
 @keyframes fade {
   from {
-    opacity: 0.5;
+    opacity: 0.1;
   }
 
   to {
@@ -90,6 +90,61 @@ body, #slider, .slide, .wrap {
 
 .caption-holder>.caption-txt {
   display: contents;
+}
+
+/* -----------Captio Animation----------- */
+.slideCaptionUp {
+  animation-name: slideCaptionUp;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideCaptionUp {
+  from {
+    opacity: 0;
+    margin-top: 100px;
+  }
+
+  top {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+.slideCaptionRight {
+  animation-name: slideCaptionRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideCaptionRight {
+  from {
+    opacity: 0;
+    margin-right: 200px;
+  }
+
+  top {
+    opacity: 1;
+    margin-right: 0px;
+  }
+}
+
+.slideCaptionLeft {
+  animation-name: slideCaptionLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideCaptionLeft {
+  from {
+    opacity: 0;
+    margin-left: 200px;
+  }
+
+  top {
+    opacity: 1;
+    margin-left: 0px;
+  }
 }
 
 /* -----------Arrows ----------- */
@@ -183,6 +238,14 @@ body, #slider, .slide, .wrap {
 
   .caption-holder {
     font-size: 30px;
+  }
+
+  .slideCaptionRight {
+    animation-duration: 1s;
+  }
+
+  .slideCaptionLeft {
+    animation-duration: 1s;
   }
 
   .arrow {
