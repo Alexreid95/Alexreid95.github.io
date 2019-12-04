@@ -43,6 +43,34 @@ body, #slider, .slide, .wrap {
 }
 
 /* -----------Slider Animation----------- */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+  background-color: rgb(0, 0, 0);
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /* -----------Captions ----------- */
 .caption-txt {
   display: none;
@@ -178,3 +206,4 @@ body, #slider, .slide, .wrap {
     height: 15px;
     margin: 8px;
   }
+
