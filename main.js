@@ -8,6 +8,8 @@ var slideIdx = 0;
 
 // Caption text
 var captionTxt = document.querySelector(".caption-holder .caption-txt");
+//Caption Animation
+var captionAnimation = "slideCaptionUp";
 // Dot navigation
 var dotCont = document.getElementById("dot-cont");
 var dots = [];
@@ -43,7 +45,10 @@ function displaySlide() {
     autoLoopSlides();
   }
   slideImg[slideIdx].style.display = "block";
+  captionTxt.style.display = "none";
+  captionTxt.className = "caption-txt " + captionAnimation;
   captionTxt.innerText = slideImg[slideIdx].querySelector(".caption-txt").innerText;
+  captionTxt.style.display = "block";
   dots[slideIdx].classList.add("active");
 }
 
@@ -66,6 +71,7 @@ function startSlides() {
 function moveSlide(i) {
   reset();
   slideIdx = i;
+  captionAnimation = "slideCaptionUp";
   displaySlide();
 }
 
@@ -80,6 +86,7 @@ function pauseSlide() {
 //Move to previous slide when the  left arrow is clicked with mouse
 var toPrev = function() {
   reset();
+  captionAnimation = "slideCaptionRight";
   if (slideIdx === 0) {
     slideIdx = slideImg.length - 1;
     displaySlide();
@@ -93,6 +100,7 @@ arrowLeft.addEventListener("click", toPrev);
 //Move to next slide when the right arrow is clicked with mouse
 var toNext = function() {
   reset();
+  captionAnimation = "slideCaptionLeft";
   if (slideIdx === slideImg.length - 1) {
     slideIdx = 0;
     displaySlide();
