@@ -92,7 +92,7 @@ body, #slider, .slide, .wrap {
   display: contents;
 }
 
-/* -----------Captio Animation----------- */
+/* -----------Caption Animation----------- */
 .slideCaptionUp {
   animation-name: slideCaptionUp;
   animation-duration: 1.5s;
@@ -172,6 +172,47 @@ body, #slider, .slide, .wrap {
   transform: rotate(315deg);
   right: 0px;
   margin-right: 50px;
+}
+
+/* -----------Arrow Animation----------- */
+.leftArrowAni {
+  animation-name: leftArrowAni;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes leftArrowAni {
+  from {
+    opacity: 0;
+    transform: rotate(0deg);
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+    transform: rotate(-45deg);
+  }
+}
+
+.rightArrowAni {
+  animation-name: rightArrowAni;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes rightArrowAni {
+  from {
+    opacity: 0;
+    transform: rotate(0deg);
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+    transform: rotate(135deg);
+  }
 }
 
 /* -----------Play/Pause Button ----------- */
@@ -269,4 +310,3 @@ body, #slider, .slide, .wrap {
     height: 15px;
     margin: 8px;
   }
-
