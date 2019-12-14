@@ -93,8 +93,8 @@ body, #slider, .slide, .wrap {
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
   font-family: sans-serif;
-  font-size: 45px;
-  background: linear-gradient(rgba(0, 0, 0, 1), transparent);
+  font-size: 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
 }
 
 .caption-holder>.caption-txt {
@@ -111,7 +111,7 @@ body, #slider, .slide, .wrap {
 @keyframes slideCaptionUp {
   from {
     opacity: 0;
-    margin-top: 100px;
+    margin-top: 150px;
   }
 
   top {
@@ -161,6 +161,7 @@ body, #slider, .slide, .wrap {
   display: none;
   position: absolute;
   margin: 20px 10px 20px 10px;
+  top: 30%;
   left: 25%;
   right: 25%;
   color: rgba(255, 255, 255, 0.9);
@@ -179,30 +180,33 @@ body, #slider, .slide, .wrap {
 .text-holder {
   content: "";
   position: absolute;
-  top: 15%;
+  top: 10%;
   width: 100%;
-  height: 70%;
+  height: 75%;
 }
 
 /* -----------Slide text Animation----------- */
 @keyframes fadeInText {
   0% {
     color: rgba(225, 225, 225, 0);
+    opacity: 0;
   }
 
   60% {
     color: rgba(225, 225, 225, 0);
+    opacity: 0;
   }
 
   100% {
     color: rgba(225, 225, 225, 0.9);
+    opacity: 0.9;
   }
 }
 
 /* -----------Carousel Animation----------- */
 .slideCurrentLeft {
   animation-name: slideCurrentLeft;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -221,7 +225,7 @@ body, #slider, .slide, .wrap {
 
 .slideNextLeft {
   animation-name: slideNextLeft;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -240,7 +244,7 @@ body, #slider, .slide, .wrap {
 
 .slideCurrentRight {
   animation-name: slideCurrentRight;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -259,7 +263,7 @@ body, #slider, .slide, .wrap {
 
 .slideNextRight {
   animation-name: slideNextRight;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -401,6 +405,47 @@ body, #slider, .slide, .wrap {
   background-color: rgba(255, 255, 255, 0.8)
 }
 
+/* -----------Contact Links----------- */
+.links-container {
+  display: flex;
+  justify-content: center;
+}
+
+.links-container .contact-links {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0px 0px 0px 0px;
+  z-index: 10;
+  top: 40%;
+  width: 80%;
+  animation-name: fadeInText;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.icon {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 10px;
+  padding: 10px 10px 10px 10px;
+  font-size: 80px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+li:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+
 /* -----------Smaller Screens Settings----------- */
 @media screen and (max-width: 400px) {
   .slide {
@@ -409,7 +454,7 @@ body, #slider, .slide, .wrap {
   }
 
   .caption-holder>.caption-txt {
-    font-size: 30px;
+    font-size: 70px;
   }
 
   .slideCaptionRight {
@@ -421,7 +466,8 @@ body, #slider, .slide, .wrap {
   }
 
   .slide-txt {
-    font-size: 14px;
+    font-size: 15px;
+    top: 20%;
   }
 
   .arrow {
@@ -446,3 +492,13 @@ body, #slider, .slide, .wrap {
     margin: 8px;
   }
 
+  .links-container .contact-links {
+    top: 25%;
+    width: 200px;
+  }
+
+  li {
+    font-size: 40px;
+    margin: 10px 50px 10px 50px;
+  }
+}
