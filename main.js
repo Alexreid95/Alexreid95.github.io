@@ -42,14 +42,15 @@ function reset() {
     textHolder[i].className = "text-holder";
     textHolder[i].style.opacity = 0;
   }
-}
-
-//Displays the right information for slide
-function displaySlide() {
+  //Rests auto-loop when slide changes
   if (auto !== null) {
     pauseSlide();
     autoLoopSlides();
   }
+}
+
+//Displays the right information for slide
+function displaySlide() {
   //Carousel movement
   nextTxt = textHolder[slideIdx];
   currentTxt.classList.add(textHolderCurrentAnimation);
@@ -103,7 +104,7 @@ function pauseSlide() {
 //Move to previous slide
 var toPrev = function() {
   reset();
-  captionAnimation = "slideCaptionRight";
+  captionAnimation = "slideCaptionLeft";
   textHolderCurrentAnimation = "slideCurrentRight";
   textHolderNextAnimation = "slideNextRight";
   (slideIdx === 0) ? slideIdx = slideImg.length - 1:slideIdx--;
@@ -115,7 +116,7 @@ arrowLeft.addEventListener("click", toPrev);
 //Move to next slide
 var toNext = function() {
   reset();
-  captionAnimation = "slideCaptionLeft";
+  captionAnimation = "slideCaptionRight";
   textHolderCurrentAnimation = "slideCurrentLeft";
   textHolderNextAnimation = "slideNextLeft";
   (slideIdx === slideImg.length - 1) ? slideIdx = 0:slideIdx++;
