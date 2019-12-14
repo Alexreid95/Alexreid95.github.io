@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="Icons\FontAwesome\css\all.css">
     <title>Alex Reid</title>
   </head>
 
@@ -15,7 +16,7 @@
       <div id="slider">
         <div class="slide slide1">
           <div class="slide-content">
-            <p class="caption-txt">Caption1</p>
+            <p class="caption-txt">Home</p>
             <p class="slide-txt">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
               commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
@@ -26,7 +27,7 @@
 
         <div class="slide slide2">
           <div class="slide-content">
-            <p class="caption-txt">Caption2</p>
+            <p class="caption-txt">About</p>
             <p class="slide-txt">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
               commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
@@ -37,7 +38,7 @@
 
         <div class="slide slide3">
           <div class="slide-content">
-            <p class="caption-txt">Caption3</p>
+            <p class="caption-txt">Portfolio</p>
             <p class="slide-txt">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
               commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
@@ -48,13 +49,21 @@
 
         <div class="slide slide4">
           <div class="slide-content">
-            <p class="caption-txt">Caption4</p>
-            <p class="slide-txt">4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="caption-txt">Contact</p>
+            <p class="slide-txt">
+              <div class="links-container">
+                <ul class="contact-links">
+                  <li><a href="https://github.com/Alexreid95" title="GitHub" target="_blank"><span class="icon fab fa-github"></span></a></li>
+                  <li><a href="https://github.com/Alexreid95/Alexreid95.github.io" title="Repo" target="_blank"><span class="icon fas fa-code"></span></a></li>
+                  <li><a href="https://www.freecodecamp.org/amura1618" title="FreeCodeCamp" target="_blank"><span class="icon fab fa-free-code-camp"></span></a></li>
+                  <li><a href="https://www.codewars.com/users/Alexreid95" title="CodeWars" target="_blank"><span class="icon fas fa-fan"></span></a></li>
+                </ul>
+              </div>
+            </p>
           </div>
         </div>
         <div class="carousel">
-          <div class="text-holder" style="background-color: rgba(10, 11, 13, 0.9)"></div>
+          <div class="text-holder" style="background-color: rgba(20, 31, 38, 0.9)"></div>
         </div>
 
       </div>
@@ -70,7 +79,7 @@
       <div id="arrow-left" class="arrow rightArrowAni"></div>
       <div id="arrow-right" class="arrow leftArrowAni"></div>
       <!--Play/Pause button -->
-      <button class="play-pause-btn fade" onclick="pauseSlide()"></button>
+      <button class="play-pause-btn" onclick="pauseSlide()"></button>
       <button class="play-pause-btn pause" onclick="autoLoopSlides()"></button>
       <!--Dot Navigation -->
       <div id="dot-cont"></div>
