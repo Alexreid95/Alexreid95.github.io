@@ -493,12 +493,12 @@ li:hover {
   }
 
   .links-container .contact-links {
-    top: 25%;
+    top: 30%;
     width: 200px;
+    height: 50px;
   }
 
   li {
     font-size: 40px;
-    margin: 10px 50px 10px 50px;
   }
 }
