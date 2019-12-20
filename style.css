@@ -700,7 +700,7 @@ body, #slider, .slide, .wrap {
   /* -----Slide3 ----- */
   .links-container .project-links {
     top: 25%;
-    width: 60%;
+    width: 50%;
     height: 60%;
     animation-duration: 2.5s;
   }
@@ -708,7 +708,7 @@ body, #slider, .slide, .wrap {
   .links-container .project-links li {
     margin: 5px;
     padding: 5px;
-    font-size: 40px;
+    font-size: 50px;
   }
 
   .project-links .link-info {
