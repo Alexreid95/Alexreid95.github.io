@@ -4,11 +4,23 @@ body, #slider, .slide, .wrap {
   width: 100%;
   height: 100vh;
   background-color: rgb(0, 0, 0);
+  font-family: sans-serif;
   overflow: hidden;
 }
 
 .wrap {
   overflow: hidden;
+}
+
+/* -----------Font ----------- */
+@font-face {
+  font-family: 'abel';
+  src: URL('FontPairs/Abel and Ubuntu/abel/Abel-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ubuntu';
+  src: URL('FontPairs/Abel and Ubuntu/ubuntu/Ubuntu-Regular.ttf') format('truetype');
 }
 
 /* -----------Slide Images ----------- */
@@ -25,10 +37,10 @@ body, #slider, .slide, .wrap {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 80%;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  height: 40%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
   animation-name: fadeBefore;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
 }
 
 .slide::after {
@@ -59,6 +71,22 @@ body, #slider, .slide, .wrap {
   background-image: url("images/Image4_erol-ahmed.jpg");
 }
 
+.image-credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 11;
+  opacity: 0.3;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 4px 6px;
+  font-size: 12px;
+  line-height: 1.2;
+  display: inline-block;
+  border-radius: 3px;
+}
+
 /* -----------Slide Image Animation----------- */
 @keyframes fadeBefore {
   from {
@@ -72,7 +100,7 @@ body, #slider, .slide, .wrap {
 
 @keyframes fadeAfter {
   from {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
   }
 
   to {
@@ -83,6 +111,9 @@ body, #slider, .slide, .wrap {
 /* -----------Captions ----------- */
 .caption-txt {
   display: none;
+  padding: 0;
+  margin: 80px 0px 0px 0px;
+  font-family: 'abel';
 }
 
 .caption-holder {
@@ -92,9 +123,8 @@ body, #slider, .slide, .wrap {
   z-index: 1;
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
-  font-family: sans-serif;
   font-size: 100px;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), transparent);
 }
 
 .caption-holder>.caption-txt {
@@ -161,11 +191,11 @@ body, #slider, .slide, .wrap {
   display: none;
   position: absolute;
   margin: 20px 10px 20px 10px;
-  top: 30%;
-  left: 25%;
-  right: 25%;
+  top: 25%;
+  left: 20%;
+  right: 20%;
   color: rgba(255, 255, 255, 0.9);
-  font-family: sans-serif;
+  font-family: 'ubuntu';
   font-size: 20px;
   animation-name: fadeInText;
   animation-duration: 2s;
@@ -283,6 +313,7 @@ body, #slider, .slide, .wrap {
 /* -----------Arrows ----------- */
 .arrow {
   position: absolute;
+  z-index: 10;
   top: 45%;
   width: 80px;
   height: 80px;
@@ -399,13 +430,120 @@ body, #slider, .slide, .wrap {
   cursor: pointer;
   background: rgba(255, 255, 255, 0.4);
   transition: background-color 0.4s;
+  transition: transform 0.6s;
+}
+
+.dots.active {
+  transform: scale(0.8);
 }
 
 .dots:hover, .dots.active {
   background-color: rgba(255, 255, 255, 0.8)
 }
 
-/* -----------Contact Links----------- */
+/* -----------Home Text, Slide 1----------- */
+.home-txt {
+  position: absolute;
+  padding: 5px;
+  margin: 10px 5px 10px 5px;
+  z-index: 5;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: sans-serif;
+  animation-name: fadeInText;
+}
+
+.pic {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("images/Image5_profile.jpg");
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  animation-duration: 2.1s;
+  animation-iteration-count: 1;
+  transition: 1s;
+}
+
+.pic:hover {
+  background-image: url("images/Image6_profile2.jpg");
+  transform: translate(-50%, -50%) scale(1.1);
+  border-radius: 5%;
+  transition: 1s;
+}
+
+.info {
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 10;
+  font-family: 'ubuntu';
+  font-style: oblique;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+/* -----------Portfolio Text, Slide 3----------- */
+.project-links {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 5px;
+  z-index: 10;
+  top: 40%;
+  width: 80%;
+  animation-name: fadeInText;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.project-links .icon {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.project-links .icon::before {
+  display: flex;
+  justify-content: center;
+}
+
+.project-links li {
+  justify-content: center;
+  list-style: none;
+  display: inline-block;
+  margin: 10px 5px 10px 5px;
+  padding: 10px;
+  font-size: 70px;
+  transition: 0.5s;
+}
+
+.project-links li:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+
+.project-links .link-info {
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+  padding: 5px;
+  margin: 5px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  font-weight: 10;
+  font-family: 'ubuntu';
+  animation-name: fadeInText;
+  animation-duration: 2.5s;
+  animation-iteration-count: 1;
+}
+
+/* -----------Contact Links, Slide 4----------- */
 .links-container {
   display: flex;
   justify-content: center;
@@ -416,7 +554,8 @@ body, #slider, .slide, .wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0px 0px 0px 0px;
+  padding: 0px;
+  margin: 5px;
   z-index: 10;
   top: 40%;
   width: 80%;
@@ -425,36 +564,55 @@ body, #slider, .slide, .wrap {
   animation-iteration-count: 1;
 }
 
-.icon {
+.links-container .contact-links .icon {
   color: rgba(255, 255, 255, 0.9);
 }
 
-li {
+.links-container .contact-links .icon::before {
+  display: flex;
+  justify-content: center;
+}
+
+.links-container .contact-links li {
   list-style: none;
   display: inline-block;
-  margin: 10px 10px;
-  padding: 10px 10px 10px 10px;
+  margin: 10px 5px 10px 5px;
+  padding: 10px;
   font-size: 80px;
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
   transition: 0.5s;
 }
 
-li:hover {
+.links-container .contact-links li:hover {
   opacity: 0.5;
   transition: 0.5s;
   transform: scale(1.2);
 }
 
+.links-container .contact-links .link-info {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: 'ubuntu';
+  color: rgba(255, 255, 255, 0.9);
+  animation-name: fadeInText;
+  animation-duration: 2.5s;
+  animation-iteration-count: 1;
+}
+
 /* -----------Smaller Screens Settings----------- */
 @media screen and (max-width: 400px) {
+
+  /* -----Page Organisation----- */
   .slide {
     max-width: 100vh;
     max-height: 100vh;
   }
 
   .caption-holder>.caption-txt {
-    font-size: 70px;
+    font-size: 60px;
   }
 
   .slideCaptionRight {
@@ -492,13 +650,44 @@ li:hover {
     margin: 8px;
   }
 
-  .links-container .contact-links {
-    top: 30%;
-    width: 200px;
-    height: 50px;
+  /* -----Slide1 ----- */
+  .pic {
+    width: 150px;
+    height: 150px;
   }
 
-  li {
+  .info {
+    font-size: 15px;
+  }
+
+  /* -----Slide2 ----- */
+  .slide-txt {
+    font-size: 15px;
+  }
+
+  /* -----Slide3 ----- */
+  .links-container .project-links {
+    top: 25%;
+    width: 60%;
+    height: 60%;
+  }
+
+  .links-container .project-links li {
+    margin: 5px;
+    padding: 5px;
+    font-size: 40px;
+  }
+
+  /* -----Slide4 ----- */
+  .links-container .contact-links {
+    top: 25%;
+    width: 60%;
+    height: 60%;
+  }
+
+  .links-container .contact-links li {
+    margin: 5px;
+    padding: 5px;
     font-size: 40px;
   }
 }
