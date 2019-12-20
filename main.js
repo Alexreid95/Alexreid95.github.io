@@ -73,8 +73,8 @@ function displaySlide() {
 //Auto-Loop slides with a set time
 function autoLoopSlides() {
   auto = setInterval(toNext, 7000);
-  playBtn.style.display = "block";
-  pauseBtn.style.display = "none";
+  pauseBtn.style.display = "block";
+  playBtn.style.display = "none";
 }
 
 //Init first slide
@@ -96,8 +96,8 @@ function moveSlide(i) {
 //Play/Pause button
 function pauseSlide() {
   clearInterval(auto);
-  pauseBtn.style.display = "block";
-  playBtn.style.display = "none";
+  playBtn.style.display = "block";
+  pauseBtn.style.display = "none";
   auto === null;
 }
 
