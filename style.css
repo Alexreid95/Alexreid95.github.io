@@ -576,8 +576,8 @@ body, #slider, .slide, .wrap {
 .links-container .contact-links li {
   list-style: none;
   display: inline-block;
-  margin: 10px 5px 10px 5px;
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
   font-size: 80px;
   transition: 0.5s;
 }
@@ -612,7 +612,8 @@ body, #slider, .slide, .wrap {
   }
 
   .caption-holder>.caption-txt {
-    font-size: 60px;
+    margin: 60px 0px 0px 0px;
+    font-size: 50px;
   }
 
   .slideCaptionRight {
@@ -631,6 +632,14 @@ body, #slider, .slide, .wrap {
   .arrow {
     width: 40px;
     height: 40px;
+  }
+
+  #arrow-left {
+    margin-left: 30px;
+  }
+
+  #arrow-right {
+    margin-right: 30px;
   }
 
   .play-pause-btn {
@@ -662,7 +671,10 @@ body, #slider, .slide, .wrap {
 
   /* -----Slide2 ----- */
   .slide-txt {
-    font-size: 15px;
+    top: 15%;
+    left: 15%;
+    right: 15%;
+    font-size: 11px;
   }
 
   /* -----Slide3 ----- */
@@ -681,13 +693,17 @@ body, #slider, .slide, .wrap {
   /* -----Slide4 ----- */
   .links-container .contact-links {
     top: 25%;
-    width: 60%;
+    width: 70%;
     height: 60%;
   }
 
   .links-container .contact-links li {
     margin: 5px;
     padding: 5px;
-    font-size: 40px;
+    font-size: 60px;
+  }
+
+  .links-container .contact-links .link-info {
+    font-size: 11px;
   }
 }
