@@ -72,7 +72,7 @@ function displaySlide() {
 
 //Auto-Loop slides with a set time
 function autoLoopSlides() {
-  auto = setInterval(toNext, 7000);
+  auto = setInterval(toNext, 10000);
   pauseBtn.style.display = "block";
   playBtn.style.display = "none";
 }
