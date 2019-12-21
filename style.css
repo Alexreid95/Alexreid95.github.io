@@ -636,8 +636,8 @@ body, #slider, .slide, .wrap {
   }
 
   .caption-holder>.caption-txt {
-    margin: 60px 0px 0px 0px;
-    font-size: 50px;
+    margin: 80px 0px 0px 0px;
+    font-size: 60px;
   }
 
   .slideCaptionRight {
@@ -685,19 +685,19 @@ body, #slider, .slide, .wrap {
 
   /* -----Carousel Animation ----- */
   .slideCurrentLeft {
-    animation-duration: 1.5s;
+    animation-duration: 1.3s;
   }
 
   .slideNextLeft {
-    animation-duration: 1.5s;
+    animation-duration: 1.3s;
   }
 
   .slideCurrentRight {
-    animation-duration: 1.5s;
+    animation-duration: 1.3s;
   }
 
   .slideNextRight {
-    animation-duration: 1.5s;
+    animation-duration: 1.3s;
   }
 
   /* -----Slide1 ----- */
@@ -715,7 +715,7 @@ body, #slider, .slide, .wrap {
     top: 15%;
     left: 15%;
     right: 15%;
-    font-size: 10px;
+    font-size: 13px;
     animation-duration: 2.5s;
   }
 
@@ -752,10 +752,48 @@ body, #slider, .slide, .wrap {
   .links-container .contact-links li {
     margin: 5px;
     padding: 5px;
-    font-size: 60px;
+    font-size: 70px;
   }
 
   .links-container .contact-links .link-info {
     font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+
+  /* -----Page Organisation----- */
+  .caption-holder>.caption-txt {
+    margin: 60px 0px 0px 0px;
+    font-size: 50px;
+  }
+
+  /* -----Carousel Animation ----- */
+  .slideCurrentLeft {
+    animation-duration: 1.5s;
+  }
+
+  .slideNextLeft {
+    animation-duration: 1.5s;
+  }
+
+  .slideCurrentRight {
+    animation-duration: 1.5s;
+  }
+
+  .slideNextRight {
+    animation-duration: 1.5s;
+  }
+
+  /* -----Slide2 ----- */
+  .slide-txt {
+    font-size: 10px;
+  }
+
+  /* -----Slide4 ----- */
+  .links-container .contact-links li {
+    margin: 5px;
+    padding: 5px;
+    font-size: 60px;
   }
 }
