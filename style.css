@@ -605,7 +605,7 @@ body, #slider, .slide, .wrap {
 }
 
 /* -----------Smaller Screens Settings----------- */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
 
   /* -----Page Organisation----- */
   .slide {
